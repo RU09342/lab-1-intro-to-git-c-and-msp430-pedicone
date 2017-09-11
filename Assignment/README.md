@@ -1,9 +1,11 @@
 Assignment 1: README
 Author: Jack Pedicone
 Created Sep 8, 2017
-Updated Sep 8, 2017
+Updated Sep 11, 2017
 
-#include <stdio.h> was needed to allow the printf declaration to suceed.
+##Jack Pedicone
+
+The header #include <stdio.h> was needed to allow the printf declaration to suceed.
 
 The function "math" was initialized before the int main similar to how it would be in c++. The main function begins as normal.
 
