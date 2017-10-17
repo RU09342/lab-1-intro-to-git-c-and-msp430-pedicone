@@ -1,20 +1,40 @@
-Assignment 1: README
-Author: Jack Pedicone
-Created Sep 8, 2017
-Updated Sep 11, 2017
+# Lab 1 - Introduction to C, Git, and the MSP430
+#### Jack Pedicone
+##### 10-14-2017
 
-##Jack Pedicone
+## Library Used
+stdio.h - default library
 
-The header #include <stdio.h> was needed to allow the printf declaration to suceed.
+## Dependencies
+* Code Composer Studio
 
-The function "math" was initialized before the int main similar to how it would be in c++. The main function begins as normal.
+## File name
+* math.c
+* math.h
 
-As the instructions did not ask for anything other than the working functions, I preset the values of num1, num2, and the operator. Testing with different values and operators led to bugged answers during my first test, which will be brought into more detail later.
+## Set Requirements
+"The overall goal of this exercise is to generate a "math.c" and "math.h" file that can eventually be placed into an example UART Calculator code. You will be responsible for generating the function as prototyped in the "math.h" file provided, and include the capability to add, substract, multiply, integer divide, and modulus. This hopefully will be a simple task, and you will not need to worry about getting this specific code to run on your processor. So what you need to do to complete this is:"
 
-The math function is then performed using num1, num2, and the operator, and its value is stored onto the int ret. The program ends when the printf declaration is completed and it reaches return 0.
+#### Tasks
+* [x] Create a math.h containing a calculator function, and have its functionality within main.c
 
-I realized while creating the math function that all 3 values that it requires are inputs, so it was necessary for me to create an output variable within the function. I called this variable "result" and set it as an integer. 
+### Detailed Description
 
-I decided to go the simpler route of using if/else statements based on the different values "Operator" could be. One mistake I did not catch until I was ready to test my code was that I forgot to double my equals signs within the if statements' condition. All of my results ended up being equal to num1 plus num2.
+* Initialize the "math.h" files to include the math function that uses two integers
+* Include math.h and stdio.h, a default library, into main.c to allow it to function.
+* Create a switch statement that detects what char operators have been entered
+* Return the desired result based on the operator, and then break, which leaves the case statement
+* By default the function will return "Invalid Operator" if any char other than the 5 indicated are entered.
+* After leaving the switch statement, the program then performs a system pause.
 
-After creating the five if statements, I returned the value of result to int main, where it would then be printed out and the program would finish.
+#### Example Code
+```C
+switch (Operator)
+	{
+	case '+':					//when entered operator is '+'
+		return(num1 + num2);	//return the addition of num1 and num2 
+		break;					//leave the case statement
+	case '-':				    
+		return(num1 - num2); 
+		break;
+```
